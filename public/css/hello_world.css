@@ -1,0 +1,63 @@
+body {
+	background: url(/img/background.jpg) no-repeat center center fixed; 
+  	background-size: cover;
+  	font-family: arial;
+}
+
+h1, h2 {
+	color:#888888;
+	text-decoration: underline;
+}
+
+blockquote {
+	font-style: italic;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin-left: 0;
+}
+
+ol {
+	list-style-type: upper-roman;
+	padding: 12px;
+	margin-left: 12px;
+}
+
+a:hover {
+	color: #888888;
+}
+
+img{
+	padding-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+	padding-left: 20px;
+}
+
+td {
+	text-align: center;
+	border-bottom: 1px solid #888888; 
+}
+
+.centered { 
+	text-align: center; 
+}
+
+.centered table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+
+
+
+
+
+

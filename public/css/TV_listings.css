@@ -1,0 +1,50 @@
+body {
+	font-family: helvetica;
+}
+
+table {
+	margin-top: 30px;
+	border-collapse: collapse;
+	margin-left: auto;
+    margin-right: auto;
+    background-color: #eaeaea;
+    width: 100%;
+}
+
+/* Networks */
+td:first-of-type {
+	color: white;
+	border: none;
+	min-width: 50px;
+	max-width: 50px;
+	background-color: grey;
+}
+/* Times */
+th {
+	color: white;
+	text-align: left;
+	background-color: grey;
+}
+
+td {
+	border-bottom: 1px solid #C9C9C9;
+	min-width: 150px;
+	max-width: 150px;
+	padding: 5px;
+}
+
+.show_end{
+	border-right: 1px solid #999999;
+}
+
+.movie{
+	background-color: #e4d7ec;
+}
+
+.sport{
+	background-color: #faf9dd;
+}
+
+.news{
+	background-color: #d7f1f3;
+}

@@ -1,0 +1,21 @@
+body {
+	background: url(/img/pink_rice.png) fixed;
+	text-align: center;
+	font-family: Arial;
+}
+
+ img {
+ 	height: 450px;
+ }
+
+ span{
+ 	color: red;
+ }
+
+ h2 {
+ 	font-size: 22px;
+ }
+
+ p {
+ 	padding: 10px;
+ }
