@@ -32,8 +32,17 @@ h3 {
 	padding-bottom: 8px;
 }
 
+hr {
+	margin-top: -20px;
+	border-top: 1px solid #CCC;
+}
+
 .indent {
 	padding-left: 40px;
+}
+
+.less_margin{
+	margin-bottom: 0px;
 }
 
 .gttt {
