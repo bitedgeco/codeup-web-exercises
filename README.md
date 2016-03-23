@@ -5,5 +5,6 @@ This repo is for James Canning’s (Github username bitedgeco’s) code complete
 ## Dependencies
 
 Mysql client
+
 PHP 
 
