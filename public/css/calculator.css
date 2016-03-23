@@ -1,0 +1,16 @@
+body {
+	background-color: #f9f9f9;
+	text-align: center;
+}
+
+button {
+	margin-top:15px;
+}
+
+#middleField {
+	width:5rem;
+}
+
+h1 {
+	padding-bottom: 5px;
+}
