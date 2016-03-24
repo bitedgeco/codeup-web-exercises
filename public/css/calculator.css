@@ -3,14 +3,22 @@ body {
 	text-align: center;
 }
 
-button {
-	margin-top:15px;
-}
-
-#middleField {
-	width:5rem;
-}
-
 h1 {
 	padding-bottom: 5px;
+}
+
+#leftField {
+	width: 19rem;
+}
+
+#centerField {
+	width:9rem;
+}
+
+#rightField {
+	width: 19rem;
+}
+
+button {
+	margin-top:15px;
 }
