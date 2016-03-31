@@ -1,24 +1,18 @@
 body {
-	background-color: #f9f9f9;
+	background-color: #f3f3f3;
 	text-align: center;
 }
 
-h1 {
-	padding-bottom: 5px;
+form {
+	margin-left: 50px; 
+	margin-right: 50px; 
 }
 
-#leftField {
-	width: 19rem;
+input {
+	margin-bottom: 10px;
 }
 
 #centerField {
-	width:9rem;
-}
-
-#rightField {
-	width: 19rem;
-}
-
-button {
-	margin-top:15px;
+	width: 6rem;
+	align-content: center;
 }
