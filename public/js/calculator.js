@@ -53,56 +53,18 @@ window.addEventListener('keyup', function (event) {
     }
 }, false);
 
-// listen for button clicks and enter values into fields
-var listenerBtn0 = function (event) {
-    focusedInput.value = focusedInput.value + "0";
+// Listening for number button presses and inserting numbers into fields
+var listenerNumBut = function (event) {
+    focusedInput.value = focusedInput.value + this.innerText;
 }
-document.getElementById('btn0').addEventListener('click', listenerBtn0, false);
 
-var listenerBtn1 = function (event) {
-    focusedInput.value = focusedInput.value + "1";
-}
-document.getElementById('btn1').addEventListener('click', listenerBtn1, false);
+// creats an var of all html items with class numBut
+var numBut = document.getElementsByClassName('numBut');
 
-var listenerBtn2 = function (event) {
-    focusedInput.value = focusedInput.value + "2";
-}
-document.getElementById('btn2').addEventListener('click', listenerBtn2, false);
-
-var listenerBtn3 = function (event) {
-    focusedInput.value = focusedInput.value + "3";
-}
-document.getElementById('btn3').addEventListener('click', listenerBtn3, false);
-
-var listenerBtn4 = function (event) {
-    focusedInput.value = focusedInput.value + "4";
-}
-document.getElementById('btn4').addEventListener('click', listenerBtn4, false);
-
-var listenerBtn5 = function (event) {
-    focusedInput.value = focusedInput.value + "5";
-}
-document.getElementById('btn5').addEventListener('click', listenerBtn5, false);
-
-var listenerBtn6 = function (event) {
-    focusedInput.value = focusedInput.value + "6";
-}
-document.getElementById('btn6').addEventListener('click', listenerBtn6, false);
-
-var listenerBtn7 = function (event) {
-    focusedInput.value = focusedInput.value + "7";
-}
-document.getElementById('btn7').addEventListener('click', listenerBtn7, false);
-
-var listenerBtn8 = function (event) {
-    focusedInput.value = focusedInput.value + "8";
-}
-document.getElementById('btn8').addEventListener('click', listenerBtn8, false);
-
-var listenerBtn9 = function (event) {
-    focusedInput.value = focusedInput.value + "9";
-}
-document.getElementById('btn9').addEventListener('click', listenerBtn9, false);
+// lops through them and adds event listener
+ for (var i = numBut.length - 1; i >= 0; i--) {
+     numBut[i].addEventListener('click', listenerNumBut, false);
+ };
 
 var listenerBtnDecimal = function (event) {
     if (focusedInput.value.indexOf(".") == -1) {

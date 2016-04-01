@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Konnami Code</title>
+<!-- Font Awsome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--  External CSS -->
+<link rel="stylesheet" href="/css/konnami.css">
+</head>
+<body>
+
+<div>
+
+    <h1>Enter the Konnami Code</h1>
+
+    <p><i class="fa fa-chevron-circle-up"></i> <i class="fa fa-chevron-circle-up"></i> <i class="fa fa-chevron-circle-down"></i> <i class="fa fa-chevron-circle-down"></i> <i class="fa fa-chevron-circle-left"></i> <i class="fa fa-chevron-circle-right"></i>
+ <i class="fa fa-chevron-circle-left"></i> <i class="fa fa-chevron-circle-right"></i> b a enter</p>
+
+
+
+
+    <div id="result">
+
+    </div>
+</div>
+
+<script src="/js/jquery-2.2.2.js"></script>
+
+<script> 
+"use strict";
+
+    var konnami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    var userInput = [];
+
+    $(document).keydown(function(event) {
+    userInput.push(event.keyCode);
+    }); 
+
+    $(document).keydown(function(event){
+    if (event.keyCode == 13) {
+        for (var i = 0; i < konnami.length; i++) {
+            if(userInput[i] == konnami[i]){
+                $('#result').html('<iframe src="https://www.youtube.com/embed/kxopViU98Xo?autoplay=1" width="640" height="360"></iframe>');
+            } else {
+                $('#result').html('<img width="400" src="http://i.imgur.com/VkcsFp5.jpg">');
+        }
+    }
+}
+});
+
+</script>
+</body>
