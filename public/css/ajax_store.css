@@ -1,0 +1,12 @@
+body {
+	font-family: "Avenir Next";
+}
+
+th {
+	background-color: LightBlue;
+}
+
+div{
+	padding-left: 10px;
+	padding-right: 10px;
+}
