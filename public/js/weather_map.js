@@ -1,7 +1,6 @@
 "use strict";
-
+//load map and set marker behavior 
 function loadMap(latitude, longitude){
-//load map
     var mapOptions = {
         zoom: 5,
         center: {
@@ -9,9 +8,7 @@ function loadMap(latitude, longitude){
             lng: longitude
         }
     };
-
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
     var marker = new google.maps.Marker({
         position: {
             lat: latitude,
@@ -21,11 +18,10 @@ function loadMap(latitude, longitude){
         map: map
     });
 
-    // marker drag
     marker.addListener("dragend", function(event){
         loadWeather(event.latLng.lat(), event.latLng.lng());
     });
-    // marker on click
+
     google.maps.event.addListener(map, 'click', function(event) {
         marker.setPosition(event.latLng);
         map.setCenter(event.latLng);
@@ -55,8 +51,8 @@ function loadWeather(latitude, longitude){
         $('#dayAfterTomorrow').html('<strong>Day after tomorrow</strong><img src="http://openweathermap.org/img/w/' + data.list[2].weather[0].icon + '.png"><p>min ' + data.list[2].temp.min + ' °C</p><p>max' + data.list[2].temp.max + ' °C</p><p>' + data.list[2].weather[0].description);
     });
 }
-//search button click
 
+//search button click
 $('#searchButton').click( function(event){
     event.preventDefault();
     var geocoder = new google.maps.Geocoder();

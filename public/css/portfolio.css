@@ -1,5 +1,6 @@
 body {
 	background-color: #fafafa;
+	font-family: "Avenir Next";
 }
 
 .top_bar{
@@ -10,10 +11,6 @@ body {
 	text-align: center;
 	width: 100%;
 	font-size: 16px;
-}
-
-.top_bar a {
-	color: #;
 }
 
 .top_bar ul {
@@ -32,26 +29,23 @@ body {
 }
 
 h1 {
-	font-size: 3.5em;
+	font-size: 3.2em;
 }
 
 .portrait{
-	background-image: url(/img/james_overlay.jpg);
-	height: 100vh;
-	background-repeat: no-repeat;
-	background-size: cover;
+	text-align: center;
 }
 
 .name {
 	position: absolute;
-	top: 55%;
-	right: 15%;
+	top: 50%;
+	right: 20%;
 	} 
 
 .job {
 	position: absolute;
-	top: 70%;
-	right: 15%;
+	top: 60%;
+	right: 20%;
 	} 
 
 .col-md-6 {
@@ -61,18 +55,18 @@ h1 {
 h2 {
 	margin-top:40px;
 	margin-bottom: 40px;
+	text-align: center;
 }
 
 .bootstrap-img{ 
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
  }
 
 .bitedge-img{
- 	width: 455px; 
- 	height: 110;
- 	padding-bottom: 120px;
- 	padding-top: 70px;
+ 	width: 300px; 
+ 	padding-bottom: 132px;
+ 	padding-top: 80px;
  }
 
  hr { 
@@ -103,7 +97,10 @@ h2 {
     color: #4b9ef2;
 }
 
-
+p {
+	text-align: center;
+	padding-top: 15px;
+}
 
 
 
