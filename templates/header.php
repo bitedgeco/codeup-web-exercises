@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<title>PHP Header</title>
-	
+	<title>Catalog</title>
 </head>
 <body>
 <a href="top"></a>
