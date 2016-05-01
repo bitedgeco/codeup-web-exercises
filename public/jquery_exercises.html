@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Jquery Exercises</title>
-
+    <title>Local Jquery Exercises</title>
 </head>
 <body>
-<div>
-    <h1>Jquery</h1>
+    <div>
+        <h1>Local Jquery</h1>
 
-    <p>This page uses Jquery</p> 
+        <p>This page uses local Jquery</p> 
 
-    <p>the advantages are</p> 
+        <p>the advantages are</p> 
 
-    <ul> 
-        <li>Easy to select things</li> 
-    </ul>
-</div>
+        <ul> 
+            <li>Easy to select things</li> 
+        </ul>
+    </div>
+    <!-- Jquery local -->
+    <script src="/js/jquery-2.2.2.js"></script>
+    <script> 
+        "use strict";
+        $(document).ready(function() {
+            
+            $('h1').click(function() {
+                $('h1').css('background-color', 'red');
+            });
 
-<script src="/js/jquery-2.2.2.js"></script>
+            $('p').dblclick(function() {
+                $('p').css('font-size', '18px');
+            });
 
-<script> 
-"use strict";
-$(document).ready(function() {
-
-    $('h1').click(function() {
-        $('h1').css('background-color', 'red');
-    });
-
-    $('p').dblclick(function() {
-        $('p').css('font-size', '18px');
-    });
-
-    $('p').hover(
-        function() {
-            $('p').css('color', 'red');
-        },
-        function() {
-            $('p').css('color', 'white');
-        }
-    );
-
-
-});
-</script>
-
-
+            $('p').hover(
+                function() {
+                    $('p').css('color', 'red');
+                },
+                function() {
+                    $('p').css('color', 'white');
+                }
+            );
+        });
+    </script>
 </body>

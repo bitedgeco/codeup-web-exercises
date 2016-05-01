@@ -20,14 +20,14 @@ $names = [
 
 echo 'shut up ' . $names[1];
 
-echo 'I have ' . count($names) . ' names';
+echo ' I have ' . count($names) . ' names';
 
 $names[] = 'Boris';
 
 var_dump($names);
 
 foreach ($names as $studentNames) {
-echo $studentNames;
+echo "{$studentNames}, ";
 }
 
 $student = [
@@ -36,22 +36,24 @@ $student = [
 'gender' => 'M'
 ];
 
-echo $student['first_name'];
+echo "<p>{$student['first_name']}</p>";
 
 $student['age'] = 31;
 
-echo "you just added the age of " . $student['age'] . "now the full data is" . $student['first_name'] . $student['last_name'] . $student['gender'] . $student['age'] ;
+echo "you just added the age of " . $student['age'] . " now the full data is " . $student['first_name'] . ' ' . $student['last_name'] . ' ' . $student['gender'] . ' ' . $student['age'] ;
 
 var_dump($student);
 
 $states = ['AK', 'MA', 'TS', 'WY'];
 
 foreach ($states as $stateName) {
-echo $stateName;
+echo "{$stateName}<br>";
 }
 
+echo "<br>";
+
 foreach ($student as $key => $value) {
-    echo "Student {$key} is {$value}";
+    echo "Student {$key} is {$value}<br>";
 }
 
 ?>

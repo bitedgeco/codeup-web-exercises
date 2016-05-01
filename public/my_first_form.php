@@ -4,14 +4,13 @@ var_dump($_POST);
 
  ?>
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>My First HTML Form</title>
 </head>
 <body>
-
 	<h2>Submit a form</h2>
 	<form method="POST" action="/my_first_form.php">
 	    <p>
@@ -26,12 +25,9 @@ var_dump($_POST);
 	        <button type="submit">Login</button>
 	    </p>
 	</form>
-
 	<hr>
-
 	<h2>Compose an email</h2>
 	<form method="POST" action="/my_first_form.php">
-
 		<p>
 			<label for="to">To:</label>
 			<input id="to" name="to" type="email" placeholder="to">
@@ -55,11 +51,8 @@ var_dump($_POST);
 			<label for="save">save email:</label>
 			<input type="checkbox" id="save" name="save" value="yes" checked>
 		</p>
-
 	</form>
-
 	<hr>
-
 	<h2>Multiple Choice Test</h2>
 	<form method="POST" action="/my_first_form.php">
 		<p>Prefered currency</p>
@@ -90,12 +83,9 @@ var_dump($_POST);
 		 	<button type="submit">Submit</button>
 		 </p>
 	</form>
-
 	<hr>
-
 	<h2>What cryto currencies have you used?</h2>
 	<form>
-	
 		<label>
 			<input type="checkbox" id="cc1" name="cc[]" value="Bitcoin">Bitcoin
 		</label>
@@ -108,9 +98,7 @@ var_dump($_POST);
 			<button type="submit">Submit</button>
 		</p>
 	</form>
-
 	<hr>
-
 	<h2>Select Testing</h2> 
 	<form>
 		<label for="cola">Select your cola: </label>
@@ -120,7 +108,6 @@ var_dump($_POST);
 		</select>
 		<button type="submit">Submit</button>
 	</form>
-
 </body>
 </html>
 

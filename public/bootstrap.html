@@ -2,45 +2,36 @@
 <html>
 <head>
 
-	<title>Bootstrap</title>
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/bootstrap.css">
+	<title>Bootstrap responsive break points</title>
+	<!-- Bootstrap CSS cdn -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- external CSS -->
+	<link rel="stylesheet" href="/css/bootstrap.css">
 </head>
 <body>
 	<div class="container-fluid">  
-		<!-- <div class="row"> -->
-			<h1>Bootstrap break points and hidden class</h1>
-			<p>Resize your window horizontally</p>
-			<div class="hidden-sm hidden-md hidden-lg">
-				<h2>
-				visible on <span>extra small</span> screen
-				</h2>
-				<img src="/img/nexus.png">
-			</div>
-			<div class="hidden-xs hidden-md hidden-lg">
-				<h2>
-				visible on <span>small</span> screen
-				</h2>
-				<img src="/img/apple-ipad.png">
-			</div>
-			<div class="hidden-sm hidden-xs hidden-lg">
-				<h2>
-				visible on <span>medium</span> screen
-				</h2>
-				<img src="/img/macbook.png">
-			</div>
-			<div class="hidden-sm hidden-md hidden-xs">
-				<h2>
-				visible on <span>large</span> screen
-				</h2> 
-				<img src="/img/pc.png"> 
-			</div>
-		<!-- </div> -->
+		<h1>Bootstrap responsive break points</h1>
+		<p>Resize your window horizontally</p>
+		<div class="visible-xs">
+			<h2>visible on <span>extra small</span> screens smaller than 768px</h2>
+			<img src="/img/nexus.png">
+		</div>
+		<div class="visible-sm">
+			<h2>visible on <span>small</span> screens larger than 768px</h2>
+			<img src="/img/apple-ipad.png">
+		</div>
+		<div class="visible-md">
+			<h2>visible on <span>medium</span> screens larger than 992px</h2>
+			<img src="/img/macbook.png">
+		</div>
+		<div class="visible-lg">
+			<h2>visible on <span>large</span> screen larger than 1200px</h2> 
+			<img src="/img/pc.png"> 
+		</div>
 	</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!-- Jquery cdn -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<!-- bootstrap JS cdn -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
 </html>

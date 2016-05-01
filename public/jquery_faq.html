@@ -1,90 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>jquery FAQ</title>
+    <title>jquery FAQ</title>
 <style>
-.invisable {
-    display: none;
-}
+    .invisable {
+        display: none;
+    }
 </style>
-
 </head>
 <body>
+    <a href='#' id="show">show all answers</a>
+    <dl>
+        <p>
+            <dt id=>Q: What are national parks?</dt>
+            <dd class ="invisable">A: Parks and stuff</dd>
+        </p>
+        <p>
+            <dt id=>Q: What are national parks?</dt>
+            <dd class ="invisable">A: Parks and stuff</dd>
+        </p>
+                <p>
+            <dt id=>Q: What are national parks?</dt>
+            <dd class ="invisable">A: Parks and stuff</dd>
+        </p>
+        <p>
+            <dt id=>Q: What are national parks?</dt>
+            <dd class ="invisable">A: Parks and stuff</dd>
+        </p>
+                <p>
+            <dt id=>Q: What are national parks?</dt>
+            <dd class ="invisable">A: Parks and stuff</dd>
+        </p>
+        <p>
+            <dt id=>Q: What are national parks?</dt>
+            <dd class ="invisable">A: Parks and stuff</dd>
+        </p>
+                <p>
+            <dt id=>Q: What are national parks?</dt>
+            <dd class ="invisable">A: Parks and stuff</dd>
+        </p>
+        <p>
+            <dt id=>Q: What are national parks?</dt>
+            <dd class ="invisable">A: Parks and stuff</dd>
+        </p>
+    </dl>
+    <h3>Yosamity</h3>
+        <ul>
+            <li>Trees</li>
+            <li>Water</li>
+            <li>Dirt</li>
+            <li>Air</li>
+        </ul>
+    <h3>Yellow stone</h3>
+        <ul>
+            <li>Trees</li>
+            <li>Water</li>
+            <li>Dirt</li>
+            <li>Air</li>
+        </ul>
+    <h3>Grand Tetons</h3>
+        <ul>
+            <li>Trees</li>
+            <li>Water</li>
+            <li>Dirt</li>
+            <li>Air</li>
+        </ul>
+    <!-- Jquery local -->
+    <script src="/js/jquery-2.2.2.js"></script>
+    <script> 
+        "use strict";
+        $(document).ready(function() {
+            $('#show').click(function(event) {
+                event.preventDefault();
+                $('dd').slideToggle();
+            });
 
-<a href='#' id="show">show all answers</a>
+            $('dt').click(function(event) {
+                $(this).next().slideToggle();
+            });
 
-<dl>
-    <p>
-        <dt id=>Q: What are national parks?</dt>
-        <dd class ="invisable">A: Parks and stuff</dd>
-    </p>
-    <p>
-        <dt id=>Q: What are national parks?</dt>
-        <dd class ="invisable">A: Parks and stuff</dd>
-    </p>
-            <p>
-        <dt id=>Q: What are national parks?</dt>
-        <dd class ="invisable">A: Parks and stuff</dd>
-    </p>
-    <p>
-        <dt id=>Q: What are national parks?</dt>
-        <dd class ="invisable">A: Parks and stuff</dd>
-    </p>
-            <p>
-        <dt id=>Q: What are national parks?</dt>
-        <dd class ="invisable">A: Parks and stuff</dd>
-    </p>
-    <p>
-        <dt id=>Q: What are national parks?</dt>
-        <dd class ="invisable">A: Parks and stuff</dd>
-    </p>
-            <p>
-        <dt id=>Q: What are national parks?</dt>
-        <dd class ="invisable">A: Parks and stuff</dd>
-    </p>
-    <p>
-        <dt id=>Q: What are national parks?</dt>
-        <dd class ="invisable">A: Parks and stuff</dd>
-    </p>
-</dl>
-<h3>Yosamity</h3>
-    <ul>
-        <li>Trees</li>
-        <li>Water</li>
-        <li>Dirt</li>
-        <li>Air</li>
-    </ul>
-<h3>Yellow stone</h3>
-    <ul>
-        <li>Trees</li>
-        <li>Water</li>
-        <li>Dirt</li>
-        <li>Air</li>
-    </ul>
-<h3>Grand Tetons</h3>
-    <ul>
-        <li>Trees</li>
-        <li>Water</li>
-        <li>Dirt</li>
-        <li>Air</li>
-    </ul>
-<script src="/js/jquery-2.2.2.js"></script>
-
-<script> 
-"use strict";
-
-$('#show').click(function(event) {
-    event.preventDefault();
-    $('dd').slideToggle();
-});
-
-$('dt').click(function(event) {
-    $(this).next().slideToggle();
-});
-
-$('h3').click(function(event) {
-    $(this).next('ul').slideToggle();
-});
-
-</script>
+            $('h3').click(function(event) {
+                $(this).next('ul').slideToggle();
+            });
+        });
+    </script>
 </body>

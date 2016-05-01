@@ -1,0 +1,25 @@
+body {
+	background-color:#f9f9f9;
+	font-family: "Avenir Next";
+	background: url(/img/shakespear_background.jpg) fixed;
+	text-align: center;
+}
+
+img {
+	height: 300px;
+	width: 300px;
+}
+
+h1 {
+	padding-bottom: 30px;
+}
+
+#insult {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.btn {
+	background-color: #a04236;
+	color: white;
+} 

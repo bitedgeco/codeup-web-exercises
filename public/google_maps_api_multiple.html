@@ -12,86 +12,74 @@
 <body>
     <!-- div to hold map -->
     <div id="map-canvas"></div>
-
     <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD1RjuhbrRWrs837HiSa6A2ULBUg2J96c"></script>
-
     <!-- Script to show address on map -->
     <script type="text/javascript">
-    (function() {
-        "use strict";
+        (function() {
+            "use strict";
+            // Set our map options
+            var mapOptions = {
+                // Set the zoom level
+                zoom: 14,
+                // This sets the center of the map at our location
+                center: {
+                    lat: 7.821390,
+                    lng: 98.342253
+                }
+            };
+            // Render the map
+            var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-        // Set our map options
-        var mapOptions = {
-            // Set the zoom level
-            zoom: 14,
+            var bbqicon = "http://www.picgifs.com/smileys/smileys-and-emoticons/pig/smileys-pig-625824.gif"
 
-            // This sets the center of the map at our location
-            center: {
-                lat: 7.821390,
-                lng: 98.342253
-            }
-        };
+            var restaurants = [
+                {
+                    name: "Anchor In Thai food",
+                    lat: 7.821390,
+                    lng: 98.342253,
+                    icon: null,
+                    label: { text: '⚓' },
+                    content: "Anchor In Thai food <br> <img height='150' src='http://4.bp.blogspot.com/-LCxJaFFNF7c/UIQgMUA9f5I/AAAAAAAAAXA/zoSSQcZ46c8/s1600/ka-prow-kai.jpg'>"
+                },
+                {
+                    name: "Family Isralie food",
+                    lat: 7.816784,
+                    lng: 98.339652,
+                    icon: null,
+                    label: { text: '✡' },
+                    content: "Family Isralie food <br> <img height='150' src='http://www.seriouseats.com/images/20081010-falafel-wars.jpg'>"
+                },
+                {
+                    name: "Thai BBQ",
+                    lat: 7.827202,
+                    lng: 98.343291,
+                    icon: bbqicon,
+                    label: null,
+                    content: "Thai BBQ <br> <img height='150' src='http://www.latitudethirtyfour.com/wp-content/uploads/2013/06/phuket_thaibbq_02.jpg'>"
+                },
+            ];
 
-        // Render the map
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
-        var bbqicon = "http://www.picgifs.com/smileys/smileys-and-emoticons/pig/smileys-pig-625824.gif"
-
-        var restaurants = [
-            {
-                name: "Anchor In Thai food",
-                lat: 7.821390,
-                lng: 98.342253,
-                icon: null,
-                label: { text: '⚓' },
-                content: "Anchor In Thai food <br> <img height='150' src='http://4.bp.blogspot.com/-LCxJaFFNF7c/UIQgMUA9f5I/AAAAAAAAAXA/zoSSQcZ46c8/s1600/ka-prow-kai.jpg'>"
-            },
-            {
-                name: "Family Isralie food",
-                lat: 7.816784,
-                lng: 98.339652,
-                icon: null,
-                label: { text: '✡' },
-                content: "Family Isralie food <br> <img height='150' src='http://www.seriouseats.com/images/20081010-falafel-wars.jpg'>"
-            },
-            {
-                name: "Thai BBQ",
-                lat: 7.827202,
-                lng: 98.343291,
-                icon: bbqicon,
-                label: null,
-                content: "Thai BBQ <br> <img height='150' src='http://www.latitudethirtyfour.com/wp-content/uploads/2013/06/phuket_thaibbq_02.jpg'>"
-            },
-        ];
-
-        restaurants.forEach(function(element, index) {
-
-            // Create lat and long for our marker position
-            var anchor = { lat: element.lat, lng: element.lng };
-
-            // Add the marker to our existing map
-
-            var marker = new google.maps.Marker({
-                animation: google.maps.Animation.DROP,
-                position: anchor,
-                icon: element.icon,
-                label: element.label,
-                map: map 
+            restaurants.forEach(function(element, index) {
+                // Create lat and long for our marker position
+                var anchor = { lat: element.lat, lng: element.lng };
+                // Add the marker to our existing map
+                var marker = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: anchor,
+                    icon: element.icon,
+                    label: element.label,
+                    map: map 
+                });
+                // fire infowindow on click
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.open(map,marker);
+                });
+                // Create a new infoWindow object with content
+                var infowindow = new google.maps.InfoWindow({
+                    content: element.content
+                });
             });
-
-            // fire infowindow on click
-            google.maps.event.addListener(marker, 'click', function() {
-                infowindow.open(map,marker);
-            });
-            // Create a new infoWindow object with content
-            var infowindow = new google.maps.InfoWindow({
-                content: element.content
-            });
-        });
-
-        
-
         })();
     </script>
 </body>

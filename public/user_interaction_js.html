@@ -4,19 +4,19 @@
 <title>User Interaction</title> 
 </head>
 <body>
-<script>
-"use strict";
+	<script>
+		"use strict";
+		(function () {
+		 	do {
+		 		var name = prompt("What is your name?");
+		 	} while (name == "" || name == "null");
 
- 	do {
- 		var name = prompt("what is your name?");
- 	} while (name == "" || name == "null");
+			alert("Welcome " + name)
 
-	alert("Welcome " + name)
+			var pizza = confirm("Press Ok if you like pizza");
 
-	var pizza = confirm("pres Ok if you like pizza");
-
-	(pizza == true) ? alert("Me too!") : alert("Good for you");
-
-</script>
+			(pizza == true) ? alert("Me too!") : alert("Good for you");
+		})();
+	</script>
 </body>
 </html>

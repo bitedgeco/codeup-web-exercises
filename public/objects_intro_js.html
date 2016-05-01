@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Objects Intro JS.html</title> 
+	<title>Objects Intro JS.html</title> 
 </head>
 <body>
-<script>
-	"use strict";
+	<script>
+		"use strict";
+		(function () {
+			// todo:
+			// Create person object with firstName and lastName properties (set to your first and last name).
+			// var person = todo;
+			var person = {};
+			person.firstName = "James";
+			person.lastName = "Canning";
+			// todo:
+			// Add a say hello method to the person object that alerts hello using the firstName and lastName properties.
+			// Say hello from the person object.
+			// person.sayHello();
+			person.sayHello = function () {
+			    alert("Hello " + this.firstName + " " + this.lastName);
+			};
 
-// todo:
-// Create person object with firstName and lastName properties (set to your first and last name).
-// var person = todo;
-var person = {};
-person.firstName = "James";
-person.lastName = "Canning";
-
-// todo:
-// Add a say hello method to the person object that alerts hello using the firstName and lastName properties.
-// Say hello from the person object.
-// person.sayHello();
-
-person.sayHello = function () {
-    alert("hello " + this.firstName + " " + this.lastName);
-};
-
-person.sayHello ();
-
-</script>
+			person.sayHello ();
+		})();
+	</script>
 </body>
 </html>
 

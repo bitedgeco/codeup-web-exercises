@@ -2,13 +2,14 @@
 <html>
 <head>
     <title>Selectors Exercise</title>
+    <!-- external CSS -->
     <link rel="stylesheet" href="/css/selectors.css">
 </head>
 <body>
     <div id="container">
         <section class="article">
             <h1 class="fancy-header">Heading One</h1>
-            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut <em>aliquip</em> ex ea commodo consequat. Duis aute irure

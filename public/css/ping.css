@@ -1,0 +1,56 @@
+body {
+	font-family: "Avenir Next";
+	color: white;
+	background-color: #f3f3f3;
+}
+
+#image {
+	position: relative;
+	text-align: center;
+}
+
+#image img {
+	background-size: contain;
+	max-width: 100%;
+}
+
+#playerNum {
+	position: absolute;
+	top: 10px;
+	left: 45%;
+}
+
+#rally {
+	position: absolute;
+	bottom: 10%;
+	left: 47%;
+}
+
+#hit {
+	position: absolute;
+	bottom: 48%;
+	left: 27.5%;
+}
+
+#miss {
+	position: absolute;
+	bottom: 38%;
+	left: 27%;
+}
+
+#player1Score {
+	position: absolute;
+	top: 50px;
+	left: 11%;
+}
+
+#player2Score {
+	position: absolute;
+	top: 50px;
+	right: 11%;
+}
+
+a {
+	color: white;
+	font-size: 18px;
+}

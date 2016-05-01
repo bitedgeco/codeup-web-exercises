@@ -6,10 +6,11 @@
 <body>
     <script>
 		"use strict";
-		    // ignore these lines for now
-		// just know that the variable 'color' will end up with a random value from the colors array
-		var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-		var color = colors[Math.floor(Math.random()*colors.length)];
+		(function () {
+			// ignore these lines for now
+			// just know that the variable 'color' will end up with a random value from the colors array
+			var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+			var color = colors[Math.floor(Math.random()*colors.length)];
 
 		    // todo: create a case statement that will handle every color except indigo and violet
 		    // todo: when a color is encountered log a message that tells the color, and an object of that color
@@ -18,25 +19,26 @@
 		    // todo: create a default case that will catch indigo and violet
 		    // todo: for the default case, log: I do not know anything by that color.
 
-		switch (color) {
-			case "red":
-				console.log("red the blood of angry men");
-				break;
-			case "orange":
-				console.log("orange rimes with door hinge"); 
-				break;
-			case "yellow":
-				console.log("yellow is the color of happines"); 
-				break;
-			case "green":
-				console.log("the grass is always greener"); 
-				break;
-			case "blue":
-				console.log("2 of my eyes are blue"); 
-				break;
-			default:
-				console.log("I do not know anything by that color");
-		}
+			switch (color) {
+				case "red":
+					console.log("red the blood of angry men");
+					break;
+				case "orange":
+					console.log("orange rimes with door hinge"); 
+					break;
+				case "yellow":
+					console.log("yellow is the color of happines"); 
+					break;
+				case "green":
+					console.log("the grass is always greener"); 
+					break;
+				case "blue":
+					console.log("2 of my eyes are blue"); 
+					break;
+				default:
+					console.log("I do not know anything by that color");
+			}
+		})();
     </script>
 </body>
 </html>

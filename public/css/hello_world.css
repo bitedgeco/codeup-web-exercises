@@ -1,11 +1,11 @@
 body {
-	background: url(/img/background.jpg) no-repeat center center fixed; 
+	background: url(/img/blue_background.jpg) no-repeat center center fixed; 
   	background-size: cover;
   	font-family: arial;
 }
 
 h1, h2 {
-	color:#888888;
+	color: #666666;
 	text-decoration: underline;
 }
 
@@ -29,7 +29,7 @@ a:hover {
 	color: #888888;
 }
 
-img{
+img {
 	padding-bottom: 20px;
 }
 

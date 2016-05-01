@@ -1,5 +1,7 @@
 body {
-	font-family: helvetica;
+font-family: "Avenir Next";
+padding-left: 20px;
+padding-right: 20px;
 }
 
 table {
@@ -33,18 +35,18 @@ td {
 	padding: 5px;
 }
 
-.show_end{
+.show_end {
 	border-right: 1px solid #999999;
 }
 
-.movie{
+.movie {
 	background-color: #e4d7ec;
 }
 
-.sport{
+.sport {
 	background-color: #faf9dd;
 }
 
-.news{
+.news {
 	background-color: #d7f1f3;
 }

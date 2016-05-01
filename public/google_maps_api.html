@@ -12,49 +12,41 @@
 <body>
     <!-- div to hold map -->
     <div id="map-canvas"></div>
-
     <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD1RjuhbrRWrs837HiSa6A2ULBUg2J96c"></script>
-
     <!-- Script to show address on map -->
     <script type="text/javascript">
-    (function() {
-        "use strict";
-
-        // Set our map options
-        var mapOptions = {
-            // Set the zoom level
-            zoom: 17,
-
-            // This sets the center of the map at our location
-            center: {
-                lat: 7.821390,
-                lng: 98.342253
-            }
-        };
-
-        // Render the map
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
-        // Create lat and long for our marker position
-        var anchor = { lat: 7.821390, lng: 98.342253 };
-
-        // Add the marker to our existing map
-        var marker = new google.maps.Marker({
-        animation: google.maps.Animation.DROP,
-        position: anchor,
-        label: { text: '⚓' },
-        map: map 
-        });
-        // fire infowindow on click
-        google.maps.event.addListener(marker, 'click', function() {
-        infowindow.open(map,marker);
-        });
-        // Create a new infoWindow object with content
-        var infowindow = new google.maps.InfoWindow({
-        content:"Anchor In Thai food <br> <img height='150' src='http://4.bp.blogspot.com/-LCxJaFFNF7c/UIQgMUA9f5I/AAAAAAAAAXA/zoSSQcZ46c8/s1600/ka-prow-kai.jpg'>"
-        });
-
+        (function() {
+            "use strict";
+            // Set our map options
+            var mapOptions = {
+                // Set the zoom level
+                zoom: 17,
+                // This sets the center of the map at our location
+                center: {
+                    lat: 7.821390,
+                    lng: 98.342253
+                }
+            };
+            // Render the map
+            var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+            // Create lat and long for our marker position
+            var anchor = { lat: 7.821390, lng: 98.342253 };
+            // Add the marker to our existing map
+            var marker = new google.maps.Marker({
+                animation: google.maps.Animation.DROP,
+                position: anchor,
+                label: { text: '⚓' },
+                map: map 
+            });
+            // fire infowindow on click
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map,marker);
+            });
+            // Create a new infoWindow object with content
+            var infowindow = new google.maps.InfoWindow({
+                content:"Anchor In Thai food <br> <img height='150' src='http://4.bp.blogspot.com/-LCxJaFFNF7c/UIQgMUA9f5I/AAAAAAAAAXA/zoSSQcZ46c8/s1600/ka-prow-kai.jpg'>"
+            });
         })();
     </script>
 </body>

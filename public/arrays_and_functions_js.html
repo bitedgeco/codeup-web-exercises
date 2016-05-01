@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Arrays And Functions JS</title> 
+	<title>Arrays And Functions JS</title> 
 </head>
 <body>
-<script>
-	"use strict";
+	This is a console log thing
+	<script>
+		"use strict";
 
-	var favoriteMovies = ["Goodfellas", "The Godfather", "Donnie Brasco", "Casino", "Zoolander", "Lord Of The Rings"];
+		var favoriteMovies = ["Goodfellas", "The Godfather", "Donnie Brasco", "Casino", "Zoolander", "Lord Of The Rings"];
 
-	// Sort your favorite movies alphabetically
-favoriteMovies.sort();
-// Use .indexOf() to find your number one favorite movie
-favoriteMovies.indexOf("Casino");
-// Use .splice() to take that movie out of the array
-favoriteMovies.splice(0, 1);
-// Put your favorite movie back in at the start of the array
-favoriteMovies.unshift("Casino");
-// Repeat the above steps for your least favorite movie; put it at the end
-favoriteMovies.indexOf("Lord Of The Rings");
-favoriteMovies.splice(3, 1);
-favoriteMovies.push("Lord Of The Rings");
-// Create a function to console.log() your favorite movies.
+		// Sort your favorite movies alphabetically
+		favoriteMovies.sort();
+		// Use .indexOf() to find your number one favorite movie
+		favoriteMovies.indexOf("Casino");
+		// Use .splice() to take that movie out of the array
+		favoriteMovies.splice(0, 1);
+		// Put your favorite movie back in at the start of the array
+		favoriteMovies.unshift("Casino");
+		// Repeat the above steps for your least favorite movie; put it at the end
+		favoriteMovies.indexOf("Lord Of The Rings");
+		favoriteMovies.splice(3, 1);
+		favoriteMovies.push("Lord Of The Rings");
+		// Create a function to console.log() your favorite movies.
 
 
-function movies() {
-	console.log("My all time favorite movie is " + favoriteMovies[0] + ". My least favorite movie is " + favoriteMovies[favoriteMovies.length -1] + ". Some other movies are ")
-		for (var i = 1; i < favoriteMovies.length - 1 ; i++) {
-		console.log (favoriteMovies[i])
-}
-}
-movies();
-
-</script>
+		function movies() {
+			console.log("My all time favorite movie is " + favoriteMovies[0] + ". My least favorite movie is " + favoriteMovies[favoriteMovies.length -1] + ". Some other movies are ")
+			for (var i = 1; i < favoriteMovies.length - 1 ; i++) {
+			console.log (favoriteMovies[i])
+		}
+	}
+	movies();
+	</script>
 </body>
 </html>
 

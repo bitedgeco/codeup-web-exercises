@@ -4,21 +4,22 @@
     <title>Iterating Arrays</title> 
 </head>
 <body>
-<script>
-	"use strict";
+	This is a console thing
+	<script>
+		"use strict";
+		(function () {
+			var names = ["John", "Paul", "George", "Ringo"];
 
-	var names = ["John", "Paul", "George", "Ringo"];
+			console.log("N of E = " + names.length);
 
-	console.log("N of E = " + names.length);
+			for (var i = 0; i < names.length; i++) {
+				console.log ("the name at " + i + " is " + names[i]);
+			}
 
-	for (var i = 0; i < names.length; i++) {
-		console.log ("the name at " + i + " is " + names[i]);
-	}
-
-	names.forEach (function (element, index, array){
-		console.log("the name at index " + index + " is " + element);
-	});
-
-</script>
+			names.forEach (function (element, index, array){
+				console.log("the name at index " + index + " is " + element);
+			});
+		})();
+	</script>
 </body>
 </html>

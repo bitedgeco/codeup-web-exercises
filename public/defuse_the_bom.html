@@ -12,24 +12,21 @@
         var detonationTimer = 5;
 
         // TODO: This function needs to be called once every second
-        function updateTimer()
-        {
+        function updateTimer(){
             if (detonationTimer == 0) {
                 window.location = 'https://www.youtube.com/watch?v=oHg5SJYRHA0';
                 document.body.innerHTML = '';
             } else if (detonationTimer > 0) {
                 document.getElementById('timer').innerHTML = detonationTimer;
             }
-
             detonationTimer--;
         }
 
-var intervalId = setInterval(updateTimer, 1000);
+        var intervalId = setInterval(updateTimer, 1000);
 
         // TODO: When this function runs, it needs to
         // cancel the interval/timeout for updateTimer()
-        function defuseTheBOM()
-        {
+        function defuseTheBOM(){
             clearInterval(intervalId);
         }
 

@@ -102,5 +102,7 @@ p {
 	padding-top: 15px;
 }
 
-
+.col-md-4 {
+	text-align: center;
+}
 
