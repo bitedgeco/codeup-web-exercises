@@ -16,15 +16,15 @@
 			?>
 		</div>
 		<div id="content">
-		<h2>How did you get the year to display in the footer? Did you just hard code it like a hack?</h2>
+			<h2>How did you get the year to display in the footer? Did you just hard code it like a hack?</h2>
 
-		<p>I am glad you asked, actualy I generate it dynamicaly with php like</p>
+			<p>I am glad you asked, actualy I generate it dynamicaly with php like</p>
 
-		<p><code>&lt;?= date ('Y') ?&gt;</code></p>
+			<p><code>&lt;?= date ('Y') ?&gt;</code></p>
 		</div>
-		<div id="footer">
-			<?php require_once 'includes_footer.php';?>
-		</div>
+	</div>
+	<div id="footer">
+		<?php require_once 'includes_footer.php';?>
 	</div>
 </body>
 </html>

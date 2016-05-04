@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>Home</title> 
 	<!-- external css -->
 	<link rel="stylesheet" href="includes.css">
 </head>
@@ -17,9 +17,9 @@
 		<div id="content">
 			<p>OMG this site is amazballs</p>
 		</div>
-		<div id="footer">
-			<?php require_once 'includes_footer.php';?>
-		</div>
+	</div>
+	<div id="footer">
+		<?php require_once 'includes_footer.php';?>
 	</div>
 </body>
 </html>

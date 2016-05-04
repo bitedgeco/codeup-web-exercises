@@ -6,7 +6,7 @@
 	<!-- external css -->
 	<link rel="stylesheet" href="includes.css">
 </head>
-<body>
+<body> 
 	<div id="container">
 		<div id="header">
 			<h1>Blog</h1>
@@ -23,9 +23,9 @@
 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
-		<div id="footer">
-			<?php require_once 'includes_footer.php';?>
-		</div>
+	</div>
+	<div id="footer">
+		<?php require_once 'includes_footer.php';?>
 	</div>
 </body>
 </html>

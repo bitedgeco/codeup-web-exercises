@@ -1,19 +1,17 @@
 <?php 
-session_start();
 
-require_once '../functions.php';
+require_once '../Auth.php';
+require_once '../Input.php';
+
+session_start();
 
 function pageController()
 {
-	if (!isset($_SESSION['logged_in_user'])){
+	if (!Auth::check()){
 		header('Location: login.php');
 		exit;
 }
-
-	$username = $_SESSION['logged_in_user'];
-
-	return ['username' => $username];
-
+	return ['username' => Auth::user()];
 }
 
 extract(pageController());
@@ -27,7 +25,7 @@ extract(pageController());
  <body>
 	<h1>Authorized</h1>
 
-	<p> Welcome <?= escape($username) ?></p>
+	<p> Welcome <?= Input::escape($username) ?></p>
 
  	<button ><a href="logout.php">Logout</a></button>
  </body>

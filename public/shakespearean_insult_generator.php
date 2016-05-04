@@ -1,33 +1,11 @@
 <?php 
 
-function randomElement($arrayName)
-{
-	return $arrayName[mt_rand(0, count($arrayName) - 1)];
-}
-
-function outputInsult($firstArray, $secondArray)
-{	
-	$first = randomElement($firstArray);
-	$second = randomElement($secondArray);
-	$firstchar = substr($first, 0, 1);
-
-	if ($firstchar == 'a' || $firstchar == 'e' || $firstchar == 'i' || $firstchar == 'o' || $firstchar == 'u'){
-		return "Thou art an {$first} {$second}.";
-	} else {
-		return "Thou art a {$first} {$second}.";
-	}
-}
+require_once '../Insult.php';
 
 function pageController()
 {
 
-	$firstWord = ['artless', 'bawdy', 'bootless', 'churlish', 'craven', 'dankish', 'fobbing', 'frothy', 'fusty', 'goatish', 'infectious' , 'jarring', 'lumpish', 'mangled', 'mewling', 'misbegotten', 'odiferous', 'paunchy', 'puking', 'rank', 'reeky', 'spleeny', 'spongy', 'tottering', 'unmuzzled', 'warped', 'wart-necked', 'weedy', 'wimpled', 'yeasty'];
-
-	$secondWord = ['baggage', 'barnacle', 'bladder', 'boar-pig', 'bum-bailey', 'canker-blossom', 'clack-dish', 'clotpole', 'codpiece', 'flap-dragon', 'flax-wench', 'foot-licker', 'giglet', 'haggard', 'horn-beast', 'lewdster', 'lout', 'maggot-pie', 'malt-work', 'measle', 'minnow', 'miscreant', 'moldwarp', 'nut-hook', 'pignut', 'puttock', 'ratsbane', 'scut', 'varlot', 'vassal', 'whey-face', 'blind-worm', 'jolt-head', 'malcontent', 'devil-monk'];
-
-	$insult = ['insult' => outputInsult($firstWord, $secondWord)];
-
-	return $insult;
+	return ['insult' => Insult::outputInsult()];
 }
 
 extract(pageController());

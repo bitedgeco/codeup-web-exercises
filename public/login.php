@@ -1,23 +1,23 @@
 <?php
 
-session_start(); 
+require_once '../Auth.php';
+require_once '../Input.php';
 
-require_once '../functions.php';
+session_start(); 
 
 function pageController()
 {
 	$message = 'Please login';
 	$username = 'Guest';
 
-	if (isset($_SESSION['logged_in_user'])){
+	if (Auth::check()){
 		header('Location: authorized.php');
 		exit;
 	}
 	if (!empty($_POST)){
-		$username = inputGet('username');
-		$password = inputGet('password');
-		if ($password == 'password'){
-			$_SESSION['logged_in_user'] = $username;
+		$username = Input::get('username');
+		$password = Input::get('password');
+		if (Auth::attempt($username, $password)){
 			header('Location: authorized.php');
 			exit;
 		} else {

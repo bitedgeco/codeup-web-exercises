@@ -1,25 +1,26 @@
 <?php
 
-require_once '../functions.php';
+// require_once '../functions.php';
+require_once '../Input.php';
 
 function pageController()
 {
-	if (!inputHas('rally')){
+	if (!Input::has('rally')){
 		$rally = 0;
 	} else {
-		$rally = inputGet('rally');
+		$rally = Input::get('rally');
 	}
 
-	if (!inputHas('player1')){
+	if (!Input::has('player1')){
 		$player1 = 0;
 	} else {
-		$player1 = inputGet('player1');
+		$player1 = Input::get('player1');
 	}
 
-	if (!inputHas('player2')){
+	if (!Input::has('player2')){
 		$player2 = 0;
 	} else {
-		$player2 = inputGet('player2');
+		$player2 = Input::get('player2');
 	}
 
 	return ['rally' 	=> $rally,
