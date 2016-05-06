@@ -1,63 +1,38 @@
 <?php 
 
-// function getMinMax()
-// {
-// 	$minMax = [];
-// 	$min = $_POST['min'];
-// 	$max = $_POST['max'];
-// 	$minMax = [$min, $max];
-// 	var_dump ($minMax);
-// 	return $minMax;
-// 	$message = "Guess a number between {$min} and {$max}";
-// }
-$min = 0;
-$max = 0;
-$guess = 0;
-$number = 0;
+session_start();
 
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
-	$min = $_POST['min'];
-	$max = $_POST['max'];
-	$guess = $_POST['guess'];
-	var_dump($max);
-	var_dump($min);
-	$number = getSolution($min, $max);
-}
+$number = makeNumber();
 
-function message($min, $max, $guess, $number)
+function makeNumber()
 {
-	$rangeMessage = "";
-	$adviceMessage = "";
-	if($min != null && $max != null){
-		$rangeMessage = "Guess a number between $min and $max";
+	if (!isset($_SESSION['number'])){
+		$number = $number = mt_rand(1, 10);
+		$_SESSION['number'] = $number; 
+		var_dump($number);
+		return $number;
+	} else{
+		$number = $_SESSION['number'];
+		var_dump($number);
+		return $number;
 	}
+}
 
-	if (evaluateGuess($guess, $number) === "Higher"){
-		$adviceMessage = "Guess Higher.";
-	} elseif (evaluateGuess($guess, $number) === "Lower"){
-		$adviceMessage = "Guess Lower.";
+function evaluateGuess($number)
+{
+	if($_SERVER['REQUEST_METHOD'] === 'POST'){
+		$guess = $_POST['guess'];
+		if ($guess < $number){
+			return "Higher";
+		} elseif ($guess > $number){
+			return "Lower";
+		} else {
+		    session_unset();
+		    session_regenerate_id(true);
+		    header('Location: high_low_browser.php');
+			return "Winner";
+		} 
 	}
-
-	return "$adviceMessage $rangeMessage";
-
-
-}
-// $message = message($min, $max);
-
-function getSolution($min, $max)
-{
-	$number = mt_rand($min, $max);
-}
-
-function evaluateGuess($guess, $number)
-{
-	if ($guess < $number){
-		return "Higher";
-	} elseif ($guess > $number){
-		return "Lower";
-	} else {
-		return "Winner";
-	} 
 }
 
 ?>
@@ -68,16 +43,13 @@ function evaluateGuess($guess, $number)
 	<title>High Low</title>
 </head>
 <body>
+	<p>Guess a number between 1 and 10</p>
 	<form method="POST">
-		<p>Please enter a minimum number<input name="min" value=<?=$min?>></input></p>
-		<p>Please enter a maximum number<input name="max" value=<?=$max?>></input></p>
-		<button type='submit'>Submit</button>
 		<p>Guess<input name="guess"></input></p>
 		<button type='submit'>Submit</button>
 	</form>
 
-	<p><?= message($min, $max, $guess, $number) ?>
-
+	<p><?= evaluateGuess($number) ?></p>
 
 </body>
 </html>
