@@ -34,6 +34,42 @@ class Input
         return strip_tags(htmlspecialchars($input));
     }
 
+    public static function getString($key)
+    {
+        if(!is_string(self::get($key))|| is_numeric(self::get($key))){
+            throw new Exception('This should be a string');
+        } else {
+            return self::get($key);
+        }
+    }
+
+    public static function getNumber($key)
+    {
+        if(!is_numeric(self::get($key))){
+            throw new Exception('This should be a number');
+            } else {
+                return intval(self::get($key)); 
+        }
+    }
+    
+    public static function getDate($key)
+    {
+        if (!date_create(self::get($key))){
+            throw new Exception('This should be a date');
+        } else {
+            return date_create(self::get($key));
+        }
+    }
+
+    // public static function getDate($key)
+    // {
+    //     if (!strtotime(self::get($key))){
+    //         throw new Exception('This should be a date');
+    //     } else {
+    //         return strtotime(self::get($key));
+    //     }
+    // }
+
 
     ///////////////////////////////////////////////////////////////////////////
     //                      DO NOT EDIT ANYTHING BELOW!!                     //

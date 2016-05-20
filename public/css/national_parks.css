@@ -1,0 +1,28 @@
+body {
+	background-color: #f9f9f9;
+}
+
+h1 {
+	color: teal;
+	text-align: center;
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 26px;
+	color: #EE6E73;
+}
+
+a {
+	color: #EE6E73;
+}
+
+form h2 {
+	color: teal;
+}
+
+form {
+	padding-bottom: 20px;
+	text-align: center;
+	color: teal;
+}

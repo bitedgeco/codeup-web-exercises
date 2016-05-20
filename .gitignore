@@ -1,3 +1,4 @@
 .DS_Store
-public/weather_map.html
-public/js/weather_map.js
+weather_map.html
+weather_map.js
+db_credentials.php
